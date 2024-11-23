@@ -32,7 +32,9 @@ npm install
 
 To run the application, use the following command:
 
-`npm run start`
+```bash
+npm run start
+```
 
 This will start the NestJS server on the default port `3000`.
 
@@ -40,7 +42,9 @@ This will start the NestJS server on the default port `3000`.
 
 Once the server is running, you can test the functionality by calling the following `POST` API:
 
-`POST /notifications/notification`
+```bash
+POST /notifications/notification
+```
 
 This endpoint triggers the creation of a notification and emits an event which is handled by the `UserService`.
 
@@ -67,11 +71,12 @@ This message comes from the `UserService`, which listens for the `user.notificat
 
 ## Key Concepts
 
-*EventEmitter*: The EventEmitter module is used to handle events in a decoupled way, helping to avoid circular dependencies.
+**EventEmitter**: The EventEmitter module is used to handle events in a decoupled way, helping to avoid circular dependencies.
 
-*Circular Dependency* : This occurs when two services depend on each other directly, creating a loop. By emitting events and handling them asynchronously, we can break the direct dependency chain.
+**Circular Dependency**: This occurs when two services depend on each other directly, creating a loop. By emitting events and handling them asynchronously, we can break the direct dependency chain.
 
 ## Technologies Used
-*NestJS*: A framework for building efficient, scalable Node.js applications.
-*EventEmitter*: A module that helps in event-driven architectures, allowing services to communicate without direct dependencies.
+**NestJS**: A framework for building efficient, scalable Node.js applications.
+
+**EventEmitter**: A module that helps in event-driven architectures, allowing services to communicate without direct dependencies.
 
